@@ -1,0 +1,8 @@
+### PO
+POST http://localhost:8001//process-pension
+Content-Type: application/json
+Accept: application/json
+
+{
+  "aadharNumber": 123415123438
+}

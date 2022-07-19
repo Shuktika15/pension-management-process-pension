@@ -9,7 +9,10 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class PensionDetail {
-    private Double pensionAmount;
-    private Integer bankServiceCharge;
+public class BankDetails {
+    private String bankName;
+
+    private Long accountNumber;
+
+    private String bankType;
 }

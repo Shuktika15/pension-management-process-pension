@@ -35,6 +35,14 @@ management:
       exposure:
         include: "*"
 
+pension-processing:
+  bank-charges:
+    private: 550
+    public: 500
+  pension:
+    self: 0.8
+    family: 0.5
+
 ---
 
 spring:
