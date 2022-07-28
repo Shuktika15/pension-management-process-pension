@@ -1,7 +1,17 @@
-### PO
-POST http://localhost:8001//process-pension
+### Process Pesion
+POST http://localhost:8001/process-pension
 Content-Type: application/json
 Accept: application/json
+
+{
+  "aadharNumber": 123415123438
+}
+
+### Process pension through gateway
+POST http://localhost:8181/process-pension
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyMzQxNTEyMzQyMzQiLCJleHAiOjE2NTkwMTk1MjUsImlhdCI6MTY1OTAxNzcyNX0.JbvZ0-yBaiHrPSQrKs3Oyv58wIxmZ87t5mk1cQFJreUwDFCAZigeysFyqJG1UDhI8s2YJAHadsvtQyrDvTkDDw
 
 {
   "aadharNumber": 123415123438
