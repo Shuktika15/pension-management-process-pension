@@ -14,19 +14,12 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class Pensioner {
     private Long aadharNumber;
-
     private String name;
-
     private LocalDate dateOfBirth;
-
     private String pan;
-
     private Integer salaryEarned;
-
     private Integer allowances;
-
     private String pensionType;
-
     private BankDetails bankDetails;
 }
 

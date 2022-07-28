@@ -11,8 +11,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class BankDetails {
     private String bankName;
-
     private Long accountNumber;
-
     private String bankType;
 }
