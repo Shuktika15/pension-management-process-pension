@@ -20,5 +20,4 @@ public class PensionController {
     public ResponseEntity<PensionDetail> processPension(@RequestBody ProcessPensionInput processPensionInput) {
         return ResponseEntity.ok().body(pensionService.processPension(processPensionInput));
     }
-
 }

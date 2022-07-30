@@ -4,6 +4,15 @@ Content-Type: application/json
 Accept: application/json
 
 {
+  "aadharNumber": 123415123438
+}
+
+### Process pension with woring aadhar number
+POST http://localhost:8001/process-pension
+Content-Type: application/json
+Accept: application/json
+
+{
   "aadharNumber": 123415123439
 }
 
@@ -11,8 +20,18 @@ Accept: application/json
 POST http://localhost:8181/process-pension
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyMzQxNTEyMzQyMzQiLCJleHAiOjE2NTkwMTk1MjUsImlhdCI6MTY1OTAxNzcyNX0.JbvZ0-yBaiHrPSQrKs3Oyv58wIxmZ87t5mk1cQFJreUwDFCAZigeysFyqJG1UDhI8s2YJAHadsvtQyrDvTkDDw
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyMzQxNTEyMzQyMzQiLCJleHAiOjE2NTkwMzAxODIsImlhdCI6MTY1OTAyODM4Mn0.C6D1H9lhBjnEHMX7VPglgmtf1mG4iPqr-Xwj7INh0LpD6c8xgdBCePgPfkadJuxWITTwaJjeA6IMBzDQkktNGg
 
 {
   "aadharNumber": 123415123438
+}
+
+### Process pension through gateway with worng aadhar number
+POST http://localhost:8181/process-pension
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyMzQxNTEyMzQyMzQiLCJleHAiOjE2NTkwMzAxODIsImlhdCI6MTY1OTAyODM4Mn0.C6D1H9lhBjnEHMX7VPglgmtf1mG4iPqr-Xwj7INh0LpD6c8xgdBCePgPfkadJuxWITTwaJjeA6IMBzDQkktNGg
+
+{
+  "aadharNumber": 123415123439
 }
