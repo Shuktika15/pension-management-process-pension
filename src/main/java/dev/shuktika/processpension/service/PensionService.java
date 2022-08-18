@@ -21,10 +21,10 @@ public class PensionService {
     private final PropertyValueConfiguration propertyValueConfiguration;
 
     private PensionDetail calculatePension(Pensioner pensioner) {
-        PensionType pensionType = PensionType.getPensionType(pensioner.getPensionType());
-        BankType bankType = BankType.getBankType(pensioner.getBankDetails().getBankType());
-        Double salary = Double.valueOf(pensioner.getSalaryEarned());
-        Double allowances = Double.valueOf(pensioner.getAllowances());
+        var pensionType = PensionType.getPensionType(pensioner.getPensionType());
+        var bankType = BankType.getBankType(pensioner.getBankDetails().getBankType());
+        var salary = Double.valueOf(pensioner.getSalaryEarned());
+        var allowances = Double.valueOf(pensioner.getAllowances());
         Double pensionPercentage = propertyValueConfiguration.getPension(pensionType);
         Integer bankServiceCharge = propertyValueConfiguration.getBankCharges(bankType);
         double pensionAmount = salary * pensionPercentage + allowances;
@@ -43,7 +43,7 @@ public class PensionService {
             PensionDetail pensionDetail = null;
 
             if (pensionerResponseEntity.getStatusCode().is2xxSuccessful() && pensionerResponseEntity.hasBody()) {
-                Pensioner pensioner = pensionerResponseEntity.getBody();
+                var pensioner = pensionerResponseEntity.getBody();
                 pensionDetail = calculatePension(Objects.requireNonNull(pensioner));
             } else if (pensionerResponseEntity.getStatusCode().is4xxClientError()) {
                 throw new AadharMismatchException(String.format("Aadhar number %s not found", aadharNumber));
@@ -53,7 +53,7 @@ public class PensionService {
 
             return pensionDetail;
         } catch (FeignException e) {
-            HttpStatus httpStatus = HttpStatus.resolve(e.status());
+            var httpStatus = HttpStatus.resolve(e.status());
 
             if (httpStatus != null) {
                 if (httpStatus.is4xxClientError()) {
